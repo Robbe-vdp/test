@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <style>
+  #circle {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  animation: move-right 5s linear infinite;
+}
+
+@keyframes move-right {
+  from {
+    left: 0;
+  }
+  to {
+    left: calc(100% - 100px);
+  }
+}
+
+#message {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+}
+  </style>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div id="counter">Aantal keer geklikt: <span id="clicks">0</span></div>
+    <div id="circle"></div>
+    <div id="message"></div>
+    <button type="button" onClick="reset()">play opnieuw</button>
+	<p id="clicks"></p>
+  </body>
+  <script src="script.js"></script>
+</html>
